@@ -3,135 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Extrém Takarító Brigád</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<title>Mini oldal</title>
 
 <style>
 body {
+    font-family: Arial;
+    text-align: center;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #f4f7fb;
-    color: #333;
+    padding: 40px;
 }
 
-/* HERO */
-.hero {
-    height: 80vh;
-    background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(0,0,0,0.5);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
-.btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #00c2a8;
-    border: none;
-    color: white;
+/* gomb */
+button {
+    padding: 12px 20px;
     font-size: 16px;
-    border-radius: 30px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #00a58f;
+/* háttér (elsötétítés) */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
 }
 
-/* SECTION */
-.section {
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-.card {
+/* felugró ablak */
+.modal {
     background: white;
     width: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h3 {
-    margin: 15px 0 10px;
-}
-
-.card p {
-    padding: 0 15px 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-/* CONTACT */
-.contact {
-    background: #0f172a;
+/* bezárás gomb */
+.close {
+    margin-top: 10px;
+    background: red;
     color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.contact p {
-    margin: 10px 0;
-}
-
-.footer {
-    background: #0b1220;
-    color: #aaa;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
+    border: none;
 }
 </style>
 
@@ -139,53 +53,29 @@ body {
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-content">
-        <h1>Extrém Takarító Brigád</h1>
-        <p>Professzionális takarítás Budapesten – gyorsan, tisztán, megbízhatóan</p>
-        <button class="btn">Kapcsolat</button>
+<h1>Weboldal teszt</h1>
+
+<button onclick="openModal()">Kattints ide</button>
+
+<!-- POPUP -->
+<div id="modalBg" class="modal-bg">
+    <div class="modal">
+        <h2>Ez egy felugró ablak</h2>
+        <p>Itt lehet szöveg, kép, ár, bármi.</p>
+
+        <button class="close" onclick="closeModal()">Bezárás</button>
     </div>
 </div>
 
-<!-- SERVICES -->
-<div class="section">
-    <h2>Szolgáltatásaink</h2>
+<script>
+function openModal() {
+    document.getElementById("modalBg").style.display = "block";
+}
 
-    <div class="cards">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80">
-            <h3>Lakástakarítás</h3>
-            <p>Tökéletes tisztaság otthonodban, gyors és alapos munkával.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80">
-            <h3>Irodatakarítás</h3>
-            <p>Rendezett, tiszta munkahely a hatékonyabb munkavégzésért.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80">
-            <h3>Extrém takarítás</h3>
-            <p>Erősen szennyezett helyek teljes körű kitakarítása profi eszközökkel.</p>
-        </div>
-
-    </div>
-</div>
-
-<!-- CONTACT -->
-<div class="contact">
-    <h2>Kapcsolat</h2>
-    <p>Email: extremtakaritas@gmail.com</p>
-    <p>Budapest és környéke</p>
-    <button class="btn">Ajánlatkérés</button>
-</div>
-
-<div class="footer">
-    © 2026 Extrém Takarító Brigád - Minden jog fenntartva
-</div>
+function closeModal() {
+    document.getElementById("modalBg").style.display = "none";
+}
+</script>
 
 </body>
 </html>
