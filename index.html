@@ -3,79 +3,401 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini oldal</title>
 
-<style>
-body {
-    font-family: Arial;
-    text-align: center;
-    margin: 0;
-    padding: 40px;
-}
+<title>AUREL | Luxus Parfümolajok</title>
 
-/* gomb */
-button {
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* háttér (elsötétítés) */
-.modal-bg {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-/* felugró ablak */
-.modal {
-    background: white;
-    width: 300px;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
+<link rel="stylesheet" href="style.css">
 
-/* bezárás gomb */
-.close {
-    margin-top: 10px;
-    background: red;
-    color: white;
-    border: none;
-}
-</style>
+<script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
 
 </head>
-
 <body>
 
-<h1>Weboldal teszt</h1>
+<header>
 
-<button onclick="openModal()">Kattints ide</button>
+<nav class="navbar">
 
-<!-- POPUP -->
-<div id="modalBg" class="modal-bg">
-    <div class="modal">
-        <h2>Ez egy felugró ablak</h2>
-        <p>Itt lehet szöveg, kép, ár, bármi.</p>
-
-        <button class="close" onclick="closeModal()">Bezárás</button>
-    </div>
+<div class="logo">
+AUREL
 </div>
 
-<script>
-function openModal() {
-    document.getElementById("modalBg").style.display = "block";
+<ul class="nav-links">
+
+<li><a href="#home">Kezdőlap</a></li>
+<li><a href="#products">Illatok</a></li>
+<li><a href="#about">Rólunk</a></li>
+<li><a href="#reviews">Vélemények</a></li>
+<li><a href="#contact">Kapcsolat</a></li>
+
+</ul>
+
+<div class="cart-btn">
+🛒
+<span>0</span>
+</div>
+
+</nav>
+
+</header>
+
+<section id="home" class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+AUREL
+</h1>
+
+<h2>
+Prémium Parfümolaj Kollekció
+</h2>
+
+<p>
+Fedezd fel az exkluzív illatok világát.
+Tartós, alkoholmentes luxus parfümolajok
+férfiaknak és nőknek.
+</p>
+
+<a href="#products" class="hero-btn">
+Kollekció megtekintése
+</a>
+
+</div>
+
+</section>
+
+<section class="luxury-banner">
+
+<div class="banner-content">
+
+<h2>
+A luxus nem egy választás.
+Életstílus.
+</h2>
+
+<p>
+Kiemelkedő minőségű parfümolajok
+válogatott alapanyagokból.
+</p>
+
+</div>
+
+</section>
+
+<section id="products" class="products">
+
+<div class="section-title">
+
+<h2>Legnépszerűbb Illatok</h2>
+
+<p>
+Válogass prémium kollekciónkból
+</p>
+
+</div>
+
+<div class="products-grid">
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200" alt="Parfüm">
+
+<div class="product-info">
+
+<h3>AUREL Royal Oud</h3>
+
+<p>
+Gazdag oud és fás jegyek.
+</p>
+
+<div class="price">
+12 990 Ft
+</div>
+
+<button>
+Kosárba
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1200" alt="Parfüm">
+
+<div class="product-info">
+
+<h3>AUREL Amber Gold</h3>
+
+<p>
+Borostyán és vanília eleganciája.
+</p>
+
+<div class="price">
+11 990 Ft
+</div>
+
+<button>
+Kosárba
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=1200" alt="Parfüm">
+
+<div class="product-info">
+
+<h3>AUREL Velvet Rose</h3>
+
+<p>
+Rózsa és pézsma tökéletes harmóniája.
+</p>
+
+<div class="price">
+10 990 Ft
+</div>
+
+<button>
+Kosárba
+</button>
+
+</div>
+
+</div>
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59b75?q=80&w=1200" alt="Parfüm">
+
+<div class="product-info">
+
+<h3>AUREL Midnight Musk</h3>
+
+<p>
+Mély pézsma és orientális jegyek.
+</p>
+
+<div class="price">
+13 990 Ft
+</div>
+
+<button>
+Kosárba
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1200" alt="Parfüm">
+
+<div class="product-info">
+
+<h3>AUREL Desert Vanilla</h3>
+
+<p>
+Édes vanília és karamell tónusok.
+</p>
+
+<div class="price">
+11 490 Ft
+</div>
+
+<button>
+Kosárba
+</button>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1619994403073-2cec4b5df8a7?q=80&w=1200" alt="Parfüm">
+
+<div class="product-info">
+
+<h3>AUREL Black Elixir</h3>
+
+<p>
+Titokzatos, erőteljes luxusillat.
+</p>
+
+<div class="price">
+14 990 Ft
+</div>
+
+<button>
+Kosárba
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="about-container">
+
+<div class="about-text">
+
+<h2>
+Az AUREL Története
+</h2>
+
+<p>
+Az AUREL célja, hogy elhozza a luxus parfümolajok világát
+azok számára, akik nem elégednek meg az átlagossal.
+Minden illatunk prémium minőségű alapanyagokból készül.
+</p>
+
+<p>
+Kollekciónk a keleti elegancia és a modern kifinomultság
+találkozása
+/* ========== GLOBAL ========== */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
 }
 
-function closeModal() {
-    document.getElementById("modalBg").style.display = "none";
+body {
+background: #0b0b0b;
+color: #fff;
 }
-</script>
 
-</body>
-</html>
+/* ========== NAVBAR ========== */
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 60px;
+background: rgba(0,0,0,0.8);
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(212,175,55,0.3);
+}
+
+.logo {
+font-size: 28px;
+font-weight: 700;
+color: #d4af37;
+letter-spacing: 3px;
+font-family: 'Cormorant Garamond', serif;
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 30px;
+}
+
+.nav-links li a {
+color: #fff;
+text-decoration: none;
+transition: 0.3s;
+font-weight: 300;
+}
+
+.nav-links li a:hover {
+color: #d4af37;
+}
+
+.cart-btn {
+color: #d4af37;
+font-size: 20px;
+cursor: pointer;
+position: relative;
+}
+
+.cart-btn span {
+position: absolute;
+top: -8px;
+right: -10px;
+background: #d4af37;
+color: #000;
+font-size: 12px;
+padding: 2px 6px;
+border-radius: 50%;
+}
+
+/* ========== HERO ========== */
+
+.hero {
+height: 100vh;
+background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c0d39?q=80&w=1600') center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+text-align: center;
+}
+
+.hero-overlay {
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+}
+
+.hero h1 {
+font-size: 80px;
+color: #d4af37;
+font-family: 'Cormorant Garamond', serif;
+letter-spacing: 5px;
+}
+
+.hero h2 {
+font-size: 24px;
+margin: 20px 0;
+}
+
+.hero p {
+max-width: 600px;
+margin: auto;
+color: #ccc;
+}
+
+.hero-btn {
+display: inline-block;
+margin-top: 30px;
+padding: 12px 30px;
+background: #d4af37;
+color: #000;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.hero-btn:hover {
+background: #b8912f;
+}
